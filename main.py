@@ -37,7 +37,7 @@ def watermark():
 
     img_out = Image.alpha_composite(img_in, txt)
 
-    # Show in GUI
+    # Show on GUI
     render_img_in = ImageTk.PhotoImage(img_out.resize((500, 500), Image.ANTIALIAS))
 
     panel = Label(desk_app, image=render_img_in)
@@ -69,15 +69,15 @@ Canvas(bg="#2980B9", width=500, height=500).grid(column=0, row=1)
 # Canvas for image generated
 Canvas(bg="#2980B9", width=500, height=500).grid(column=1, row=1)
 
-# Button to select a img file
+# Button to select an img file
 select_file_button = Button(text="Select an image", command=open_image, highlightthickness=0)
 select_file_button.grid(column=0, row=2, pady=10)
 
-# Button to select a img file
+# Button to select an img file
 select_file_button = Button(text="Apply watermark", command=watermark, highlightthickness=0)
 select_file_button.grid(column=1, row=2, pady=10)
 
-# Button to save a img file
+# Button to save an img file
 select_file_button = Button(text="Save image", command=save_image, highlightthickness=0)
 select_file_button.grid(column=0, row=3, columnspan=2, pady=15)
 
